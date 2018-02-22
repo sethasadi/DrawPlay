@@ -64,13 +64,28 @@ public class Cat {
 		g2.rotate(Math.toRadians(-40), x+15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
 		g2.fillRect(x + 15 + MOUTH_WIDTH / 2, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
 		
+		// return rotation to normal
 		g2.rotate(Math.toRadians(20), x+15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
 		
+		// draw nose
 		g2.setColor(Color.white);
 		g2.rotate(Math.toRadians(45),x + MOUTH_WIDTH / 2, y + MOUTH_HEIGHT / 4 - 33);
 		g2.fillRect(x + MOUTH_WIDTH / 2 - 5, y + MOUTH_HEIGHT / 4 - 5 - 33, 10, 10);
 		
+		// return rotation to normal
 		g2.rotate(Math.toRadians(-45),x + MOUTH_WIDTH / 2, y + MOUTH_HEIGHT / 4 - 33);
+		
+		// draw ears
+		g2.setColor(Color.black);
+		g2.rotate(Math.toRadians(85), 213, 77);
+		g2.fillRect(198, 62, 30, 30);
+		
+		x = catX;
+		y = catY;
+		g2.rotate(Math.toRadians(-85), 213, 77);
+		
+		g2.rotate(Math.toRadians(-85), 90, 75);
+		g2.fillRect(75, 60, 30, 30);
 
 	}
 }
