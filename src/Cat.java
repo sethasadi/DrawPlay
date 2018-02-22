@@ -65,6 +65,12 @@ public class Cat {
 		g2.fillRect(x + 15 + MOUTH_WIDTH / 2, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
 		
 		g2.rotate(Math.toRadians(20), x+15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
+		
+		g2.setColor(Color.white);
+		g2.rotate(Math.toRadians(45),x + MOUTH_WIDTH / 2, y + MOUTH_HEIGHT / 4 - 33);
+		g2.fillRect(x + MOUTH_WIDTH / 2 - 5, y + MOUTH_HEIGHT / 4 - 5 - 33, 10, 10);
+		
+		g2.rotate(Math.toRadians(-45),x + MOUTH_WIDTH / 2, y + MOUTH_HEIGHT / 4 - 33);
 
 	}
 }
