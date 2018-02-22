@@ -7,8 +7,8 @@ public class Cat {
 	// pick a head dimension
 	private static final int HEAD_DIMENSION = 200;
 	// eyes will be about 1/4 from top of head and 1/4 from left
-	private static final int EYE_Y = HEAD_DIMENSION/4;
-	private static final int EYE_X = HEAD_DIMENSION/4;
+	private static final int EYE_Y = HEAD_DIMENSION/4 - 5;
+	private static final int EYE_X = HEAD_DIMENSION/4 + 5;
 	private static final int EYE_SEPARATION = HEAD_DIMENSION/3;
 	// pick eye dimensions
 	private static final int EYE_HEIGHT = 40;
@@ -56,7 +56,15 @@ public class Cat {
 		g2.fillRect(x - 15, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
 		g2.rotate(Math.toRadians(-20), x-15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
 		g2.fillRect(x - 15, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
-		//g2.fillRect(x + 5 + MOUTH_WIDTH / 2, y - 10, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
+		// add right whiskers
+		g2.rotate(Math.toRadians(20), x-15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
+		g2.fillRect(x + 15 + MOUTH_WIDTH / 2, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
+		g2.rotate(Math.toRadians(20), x+15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
+		g2.fillRect(x + 15 + MOUTH_WIDTH / 2, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
+		g2.rotate(Math.toRadians(-40), x+15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
+		g2.fillRect(x + 15 + MOUTH_WIDTH / 2, y - 30, MOUTH_WIDTH / 2, MOUTH_HEIGHT / 4);
+		
+		g2.rotate(Math.toRadians(20), x+15 + MOUTH_WIDTH / 2, y-30 + MOUTH_HEIGHT / 4);
 
 	}
 }
